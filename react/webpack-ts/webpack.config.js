@@ -32,4 +32,11 @@ module.exports = {
     }),
     new Dotenv(),
   ],
+  devServer: {
+    static: {
+      directory: path.join(__dirname, "public"),
+    },
+    compress: true,
+    port: 4000,
+  },
 };
