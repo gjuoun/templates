@@ -3,17 +3,17 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
 
 module.exports = {
-  entry: path.join(__dirname, "src", "index.jsx"),
+  entry: path.join(__dirname, "src", "index.tsx"),
   output: {
     path: path.resolve(__dirname, "dist"),
   },
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: [".ts", ".tsx", ".js", ".jsx"],
   },
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.tsx?$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",

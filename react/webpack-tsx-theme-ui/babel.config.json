@@ -1,0 +1,25 @@
+{
+  "presets": [
+    [
+      "@babel/preset-react",
+      {
+        "throwIfNamespace": false,
+        "runtime": "automatic",
+        "importSource": "theme-ui",
+        "development": false
+      }
+    ],
+    [
+      "@babel/preset-typescript",
+      {
+        "isTSX": true,
+        "allExtensions": true
+      }
+    ]
+  ],
+  "targets": {
+    "esmodules": true,
+    "browsers": "last 2 versions"
+  }
+  // "plugins": ["@emotion/babel-plugin"]
+}
