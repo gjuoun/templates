@@ -3,19 +3,24 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
 
 module.exports = {
-  entry: path.join(__dirname, "src", "index.tsx"),
+  entry: path.join(__dirname, "src", "index.jsx"),
   output: {
     path: path.resolve(__dirname, "dist"),
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js"],
+    extensions: [".js", ".jsx"],
   },
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
-        use: "ts-loader",
+        test: /\.jsx?$/,
         exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          // options: {
+          //   presets: [["@babel/preset-env", { targets: "defaults" }]],
+          // },
+        },
       },
       {
         test: /\.css$/i,

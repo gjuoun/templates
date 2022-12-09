@@ -1,0 +1,21 @@
+{
+  "presets": [
+    ["@babel/preset-env", { "targets": "> 0.25%, not dead" }],
+    [
+      "@babel/preset-react",
+      {
+        "pragma": "React.createElement", // default pragma is React.createElement (only in classic runtime)
+        "pragmaFrag": "React.Fragment", // default is React.Fragment (only in classic runtime)
+        // "throwIfNamespace": false, // defaults to true
+        // "runtime": "automatic", // defaults to classic
+        // "importSource": "@emotion/react",
+        "development": false
+      }
+    ]
+  ]
+  // "targets": {
+  //   "esmodules": true,
+  //   "browsers": "last 2 versions"
+  // },
+  // "plugins": ["@emotion/babel-plugin"]
+}
